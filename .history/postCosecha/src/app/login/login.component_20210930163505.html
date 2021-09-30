@@ -1,4 +1,4 @@
-
+<ion-page>
   <ion-header :translucent="true">
   </ion-header>
   
@@ -14,7 +14,7 @@
           <ion-input placeholder="Ingrese contraseña" type="password"></ion-input>
       </ion-item>
       <br>
-      <ion-button shape="round" expand="full" >Autenticar</ion-button>
+      <ion-button @click="() => router.push('/folder/Mallas')" shape="round" expand="full" >Autenticar</ion-button>
     </div>
   </ion-content>
-
+</ion-page>
