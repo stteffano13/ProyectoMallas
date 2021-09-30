@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -12,5 +14,9 @@ export class AppComponent {
    
   ];
   public labels = ['Logout'];
-  constructor() {}
+  constructor(public menuCtrl: MenuController) {
+    this.menuCtrl.enable(false)
+
+    
+  }
 }
