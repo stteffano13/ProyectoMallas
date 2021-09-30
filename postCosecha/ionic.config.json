@@ -1,0 +1,7 @@
+{
+  "name": "postCosecha",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
