@@ -1,7 +1,16 @@
 
 
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay"    >
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+</ion-navbar>
+</ion-header>
+
+  <ion-split-pane contentId="main-content" >
+    <ion-menu   contentId="main-content" type="overlay"    >
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Bienvenido</ion-list-header>
@@ -25,7 +34,10 @@
         </ion-list>
       </ion-content>
     </ion-menu>
+    
+  
+       
     <ion-router-outlet id="main-content"></ion-router-outlet>
+  
   </ion-split-pane>
-
 

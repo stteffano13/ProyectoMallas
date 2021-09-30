@@ -10,14 +10,14 @@ export class FolderPage implements OnInit {
   public folder: string;
   public appPages = [
     { title: 'Mallas', url: '/folder/mallas', icon: 'ice-cream' },
-    { title: 'Mesas', url: '/folder/Outbox', icon: 'ribbon' },
-    { title: 'Bunches', url: '/folder/Favorites', icon: 'rose' },
+    { title: 'Mesas', url: '/folder/mesas', icon: 'ribbon' },
+    { title: 'Bunches', url: '/folder/bunches', icon: 'rose' },
    
   ];
   public labels = ['Logout'];
   constructor(private activatedRoute: ActivatedRoute) {
 
-    debugger
+  
    }
 
   ngOnInit() {
