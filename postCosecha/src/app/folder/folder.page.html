@@ -1,7 +1,7 @@
 
 
-<ion-split-pane contentId="main-content">
-  <ion-menu contentId="main-content" type="overlay">
+<ion-split-pane contentId="main-content-2">
+  <ion-menu contentId="main-content-2" type="overlay">
     <ion-content>
       <ion-list id="inbox-list">
         <ion-list-header>Bienvenido</ion-list-header>
@@ -21,7 +21,7 @@
 
         <ion-item *ngFor="let label of labels" lines="none" id="optSalir">
           <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-          <ion-label>{{ label }}</ion-label>
+          <ion-label [routerLink]="['../login']">{{ label }}</ion-label>
         </ion-item>
       </ion-list>
     </ion-content>
@@ -29,6 +29,6 @@
 
 
 
-  <ion-router-outlet id="main-content"></ion-router-outlet>
+  <ion-router-outlet id="main-content-2"></ion-router-outlet>
 
 </ion-split-pane>

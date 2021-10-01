@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -10,11 +10,11 @@ export class LoginComponent implements OnInit {
 
   constructor(public router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  autenticar(){
-this.router.navigate(['../folder/mallas'])
-    
+  autenticar() {
+    this.router.navigate(['../folder/menu/mallas'])
+
   }
 
 }

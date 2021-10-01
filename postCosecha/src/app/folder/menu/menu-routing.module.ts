@@ -8,8 +8,8 @@ import { MesasComponent } from './mesas/mesas.component';
 const routes: Routes = [ {
   path: '',
   component: MenuComponent,
-  children:[
-    { path:'mallas2',component: MallasComponent }]
+ 
+    children:[{path:'mallas',component:MallasComponent},{path:'mesas',component:MesasComponent},{path:'bunches',component:BunchesComponent}]
 }];
 
 @NgModule({
