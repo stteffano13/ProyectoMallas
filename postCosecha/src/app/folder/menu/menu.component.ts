@@ -1,4 +1,4 @@
-import { Component, OnInit , OnChanges, DoCheck } from '@angular/core';
+import { Component, OnInit , OnChanges } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 
@@ -7,20 +7,29 @@ import { MenuController } from '@ionic/angular';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent implements OnInit,DoCheck {
+export class MenuComponent implements OnInit,OnChanges {
  public Menu;
  public titulo;
   constructor(public menuController:MenuController,public route: ActivatedRoute, public router:Router) {
-  
+    this.capturaParametro();
 
     //debugger
    }
 
-   ngDoCheck(){
+   ngOnChanges(){
+   this.capturaParametro();
+    
+   }
 
+  ngOnInit() {}
+
+  async  openMenu() {
+    await this.menuController.open();
+  }
+
+  capturaParametro(){
     this.router.events.subscribe((val) => {
-      // see also 
-      console.log(val['url']) 
+      
 
       this.Menu=val['url'];
       if(this.Menu!=undefined){
@@ -28,16 +37,6 @@ export class MenuComponent implements OnInit,DoCheck {
         
       }
   });
-    /*console.log( this.route.snapshot['_routerState'].url.split('/'));
-
-    this.Menu=this.route.snapshot['_routerState'].url.split('/');
-    this.titulo=this.Menu[3]*/
-   }
-
-  ngOnInit() {}
-
-  async  openMenu() {
-    await this.menuController.open();
   }
 
 }
