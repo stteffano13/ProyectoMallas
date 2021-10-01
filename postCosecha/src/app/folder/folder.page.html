@@ -19,9 +19,9 @@
       <ion-list id="labels-list">
         <ion-list-header>Opciones</ion-list-header>
 
-        <ion-item *ngFor="let label of labels" lines="none" id="optSalir">
-          <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-          <ion-label [routerLink]="['../login']">{{ label }}</ion-label>
+        <ion-item  lines="none" id="optSalir">
+          <ion-icon slot="start" ios="exit" md="exit"></ion-icon>
+          <ion-label (click)="Logout()">Salir</ion-label>
         </ion-item>
       </ion-list>
     </ion-content>
