@@ -1,5 +1,6 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-folder',
@@ -8,11 +9,24 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FolderPage implements OnInit {
   public folder: string;
+  public appPages = [
+    { title: 'Mallas', url: '/folder/menu/mallas', icon: 'ice-cream' },
+    { title: 'Mesas', url: '/folder/menu/mesas', icon: 'ribbon' },
+    { title: 'Bunches', url: '/folder/menu/bunches', icon: 'rose' },
+   
+  ];
+  public labels = ['Logout'];
+  constructor(private activatedRoute: ActivatedRoute, private router:Router) {
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  
+   }
 
   ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+    
+    
+  }
+  Logout(){
+    this.router.navigate(['../login'])
   }
 
 }
