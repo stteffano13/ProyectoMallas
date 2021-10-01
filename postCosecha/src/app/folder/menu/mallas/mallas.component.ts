@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class MallasComponent implements OnInit {
 
   constructor() { 
- 
+ debugger
   }
 
   ngOnInit() {}
-
+  debugger
 }
